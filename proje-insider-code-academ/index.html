@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css'>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+
+<body>
+
+   
+<div class="twitter-logo"><a href="https://www.instagram.com/marmaraaihl/" target="_blank" ><img src="img/linkedln_picture_png.webp" alt="okul ig"></a></div>
+   
+
+	
+    <!-- header - stars -->
+    <header class="header" id="header">
+    
+        <nav class="navbar container">
+            <div class="zort"><img src="img/okul logo.jpeg"  width="60" height="60" alt=""></div>
+            
+            <a href="./index.html" class="brand">Marmara</a>
+            <div class="burger" id="burger">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </div>
+            <section class="menu" id="forumkanalları">
+                <h1 class="heading">Forum <span>kanalları</span></h1>
+                 <div class="box-container">
+         
+                     <div class="box-head">
+                       <h2 style="color: white; font-size: 21px;">Site admini henüz kanal oluşturmamış.</h2>
+                     </div>
+                     <div >
+                       <a href="https://survey.porsline.com/s/OtPRg5Sa" class="btn">Site adminine mesaj göndermek için tıkla!</a>
+                     </div>
+                   </div>
+                 </div>
+         
+                 <h1 id="hakkında" class="heading">nasıl<span>kullanılır?</span></h1>
+               <div class="box-container">
+                 <div class="box">
+                   <div class="box-head">
+                     <img src="https://cdn.discordapp.com/attachments/1078833583420088330/1083486968933003376/Screenshot_2023-03-09-23-29-52-002_com.whatsapp.jpg" alt="menu" />
+         
+                     <h3>Bilgisayarınızdan veya Telefonununzdan Kaydetmeye Başlayın</h3>
+                   </div>
+                   <div class="box-bottom">
+                     <a href="#" class="btn"> Kaydediciyi Aç</a>
+                   </div>
+                 </div>
+                 <div class="box">
+                   <div class="box-head">
+                     <img src="https://cdn.discordapp.com/attachments/1078833583420088330/1083486969230790747/Screenshot_2023-03-09-23-29-46-544_com.whatsapp.jpg" alt="">
+         
+                     <h3>Telefonunuzdan .av Formatında Ses Dosyası Seçin.</h3>
+         
+                   </div>
+                   <div class="box-bottom">
+                     <a href="#" class="btn">Dosya Seç</a>
+                   </div>
+                 </div>
+                 <div class="box">
+                   <div class="box-head">
+                     <img src="https://cdn.discordapp.com/attachments/1078833583420088330/1083486969465675898/Screenshot_2023-03-09-23-29-41-810_com.whatsapp.jpg" alt="menu" />
+         
+                     <h3>Yüklemek İçin Giriş Yapın</h3>
+         
+                   </div>
+                   <div class="box-bottom">
+                     <a href="#" class="btn">Giriş Yap veya Kaydol</a>
+                   </div>
+                 </div>
+               </div>
+            </section>
+            <!-- menü items - start -->
+            <span class="overlay"></span>
+            <div class="menu" id="menu">
+                <ul class="menu-inner">
+                    <li class="menu-item"><a class="menu-link" >Ana Sayfa</a></li>
+                    <li class="menu-item"><a class="menu-link" href="#">Program</a></li>
+                    <li class="menu-item"><a class="file:///C:/Users/nesrin/Desktop/proje%20deneme/kul%C3%BCpler.html" href="./kulüpler.html">Kulüpler ve Takımlar</a></li>
+                    <li class="menu-item"><a class="menu-link" href="hakkımızda.html">Hakkımızda</a></li>
+                </ul>
+            </div>
+             <!-- menü items - end -->
+             <!-- search-block start -->
+            <span><i class="bx bx-search search-toggle"></i></span>
+            <div class="search-block">
+                <form class="search-form">
+                    <span><i class="bx bx-arrow-back search-cancel"></i></span>
+                    <input type="search" name="search" class="search-input" placeholder="Search here...">
+                </form>
+            </div>
+             <!-- search-block end -->
+        </nav>
+    </header>
+    <!-- header - end  -->
+    <!-- script - start -->
+    <script>
+        const navbarMenu = document.getElementById("menu");
+        const burgerMenu = document.getElementById("burger");
+        const bgOverlay = document.querySelector(".overlay");
+
+        if (burgerMenu && bgOverlay) {
+            burgerMenu.addEventListener("click", () => {
+                navbarMenu.classList.add("is-active");
+                bgOverlay.classList.toggle("is-active");
+            });
+
+            bgOverlay.addEventListener("click", () => {
+                navbarMenu.classList.remove("is-active");
+                bgOverlay.classList.toggle("is-active");
+            });
+        }
+
+        document.querySelectorAll(".menu-link").forEach((link) => {
+            link.addEventListener("click", () => {
+                navbarMenu.classList.remove("is-active");
+                bgOverlay.classList.remove("is-active");
+            });
+        });
+
+        const searchBlock = document.querySelector(".search-block");
+        const searchToggle = document.querySelector(".search-toggle");
+        const searchCancel = document.querySelector(".search-cancel");
+
+        if (searchToggle && searchCancel) {
+            searchToggle.addEventListener("click", () => {
+                searchBlock.classList.add("is-active");
+            });
+
+            searchCancel.addEventListener("click", () => {
+                searchBlock.classList.remove("is-active");
+            });
+        }
+
+    </script>
+    <!-- script - end -->
+
+
+
+
+</body>
+</html>

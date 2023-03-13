@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="kulüpler.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-CYfZ1H2qwG0o9JgUbvS8KYJf5SKSPmzIOx3uZ4g8J7xnR+zyXY4X7XJb1h8lt7WkzNt+op7CZQvJ8gltWZbDTg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+  <!-- header start -->
+    <header class="header" id="header">
+        <!-- nav start -->
+        <nav class="navbar container">
+          <div class="zort"><img src="img/okul logo.jpeg"  width="60" height="60" alt=""></div>
+            <a href="index.html" class="brand">Marmara</a>
+            <div class="burger" id="burger">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </div>
+            <span class="overlay"></span>
+            <div class="menu" id="menu">
+                <ul class="menu-inner">
+                    <li class="menu-item"><a class="menu-link" href="#">Etkinlikler</a></li>
+                    <li class="menu-item"><a class="menu-link" href="index.html">Ana Sayfa</a></li>
+                    <li class="menu-item"><a class="menu-link" href="hakkımızda.html">Hakkımızda</a></li>
+                </ul>
+            </div>
+            <span><i class="bx bx-search search-toggle"></i></span>
+            <div class="search-block">
+                <form class="search-form">
+                    <span><i class="bx bx-arrow-back search-cancel"></i></span>
+                    <input type="search" name="search" class="search-input" placeholder="Search here...">
+                </form>
+            </div>
+        </nav>
+        <!-- nav end -->
+    </header>
+    <!-- header-end -->
+        <!-- main start -->
+        <main>
+            <div class="content">
+              <section class="main-section">
+                <div><h1>Kulüpler ve Takımlar:</h1>
+                  <p>Bu bölümde üyesi olduğunuz kulüpler ve takımlar hakkında bilgi bulabilirsiniz.</p>
+                  <ul class="my-clubs">
+                      <li>Lorem, ipsum.</li>
+                      <li>Explicabo, similique.</li>
+                      <li>Distinctio, tempore?</li>
+                      <li>Reprehenderit, deleniti!</li>
+                      <li>Nemo, fuga.</li>
+                  </ul></div>
+                <div>
+                    <h2>Diğerleri:</h2>
+                    <p>Bu bölümde diğer kulüpler ve takımlar hakkında bilgi bulabilirsiniz.</p>
+                    <ul class="other-clubs">
+                      <li>
+                        Lorem ipsum.
+                        <button class="apply-button">Katıl</button>
+                      </li>
+                      <li>
+                        Impedit fuga delectus.
+                        <button class="apply-button">Katıl</button>
+                      </li>
+                      <li>
+                        Laboriosam voluptates.
+                        <button class="apply-button">Katıl</button>
+                      </li>
+                      <li>
+                        Quisquam facilis.
+                        <button class="apply-button">Katıl</button>
+                      </li>
+                      <li>
+                        Excepturi delectus.
+                        <button class="apply-button">Katıl</button>
+                      </li>
+                      <li>
+                        Voluptas blanditiis.
+                        <button class="apply-button">Katıl</button>
+                      </li>
+                      <li>
+                        Officia exercitationem!
+                        <button class="apply-button">Katıl</button>
+                      </li>
+                    </ul>
+                  </div>                  
+              </section>
+            </div>
+            <!-- sidebar-start -->
+            <aside class="sidebar">
+                <div>
+                  <h2>Kulüp Tartışmaları</h2>
+                  <p>Bu bölümde kulüplerin etkinlikleri hakkında tartışabilirsiniz.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum porro minima sequi! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae, error expedita? Culpa quo maxime quia eius totam reprehenderit?</p>
+                  <div class="buttons">
+                    <button class="like-button">Beğen</button>
+                    <button class="comment-button">Yorum Yap</button>
+                  </div>
+                </div>                  
+            </aside>    
+           <!-- sidebar-end -->
+          </main>
+          <!-- main-end -->
+        <!-- script start -->
+        <script>
+            const navbarMenu = document.getElementById("menu");
+            const burgerMenu = document.getElementById("burger");
+            const bgOverlay = document.querySelector(".overlay");
+    
+            if (burgerMenu && bgOverlay) {
+                burgerMenu.addEventListener("click", () => {
+                    navbarMenu.classList.add("is-active");
+                    bgOverlay.classList.toggle("is-active");
+                });
+    
+                bgOverlay.addEventListener("click", () => {
+                    navbarMenu.classList.remove("is-active");
+                    bgOverlay.classList.toggle("is-active");
+                });
+            }
+    
+            document.querySelectorAll(".menu-link").forEach((link) => {
+                link.addEventListener("click", () => {
+                    navbarMenu.classList.remove("is-active");
+                    bgOverlay.classList.remove("is-active");
+                });
+            });
+    
+            const searchBlock = document.querySelector(".search-block");
+            const searchToggle = document.querySelector(".search-toggle");
+            const searchCancel = document.querySelector(".search-cancel");
+    
+            if (searchToggle && searchCancel) {
+                searchToggle.addEventListener("click", () => {
+                    searchBlock.classList.add("is-active");
+                });
+    
+                searchCancel.addEventListener("click", () => {
+                    searchBlock.classList.remove("is-active");
+                });
+            }
+    
+        </script>
+        <!-- script end -->
+          
+</body>
+</html>
